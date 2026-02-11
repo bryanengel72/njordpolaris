@@ -6,8 +6,8 @@ const Hero: React.FC = () => {
       {/* Hero Image Container */}
       <div className="w-full h-[60vh] md:h-[80vh] bg-gray-200 relative overflow-hidden">
         <img
-          src="https://picsum.photos/seed/molten1/1920/1080"
-          alt="Molten metal pouring in industrial factory"
+          src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/oil_tank.jpg"
+          alt="Crude oil tank"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/10"></div>

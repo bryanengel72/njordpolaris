@@ -68,38 +68,74 @@ const productData: ProductCategory[] = [
 const Products: React.FC = () => {
   return (
     <div id="products" className="bg-gray-50 py-12 md:py-24 reveal">
-      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 space-y-20">
 
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Our Products</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Our Products</h2>
 
-        <div className="w-full h-64 md:h-96 bg-gray-200 mb-12 overflow-hidden rounded-sm">
-          <img
-            src="https://picsum.photos/seed/njord_products/1920/1080"
-            alt="Metal ingots in warehouse"
-            className="w-full h-full object-cover"
-          />
+        {/* Category 1: Energy */}
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <div className="w-full h-64 md:h-96 bg-gray-200 overflow-hidden rounded-sm">
+            <img
+              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/oil_tank.jpg"
+              alt="Crude oil tank"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="flex-1">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 uppercase tracking-wide">Energy</h3>
+            <p className="text-gray-700 leading-relaxed text-lg mb-6">
+              We trade and transport a wide range of energy commodities, including crude oil, natural gas, refined petroleum products, and biofuels. Our global network ensures efficient sourcing and delivery to meet the world's growing energy demands.
+            </p>
+            <ul className="list-disc list-inside text-gray-700 leading-relaxed text-lg space-y-2">
+              <li>Crude Oil</li>
+              <li>Natural Gas</li>
+              <li>Refined Petroleum Products</li>
+              <li>Biofuels</li>
+            </ul>
+          </div>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {productData.map((category, index) => (
-            <div key={index} className="bg-white p-8 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 pb-4 border-b border-gray-100">
-                {category.title}
-              </h3>
-              <ul className="space-y-4">
-                {category.items.map((item, i) => (
-                  <li key={i}>
-                    <span className="block font-semibold text-gray-800">{item.name}</span>
-                    {item.description && (
-                      <span className="block text-sm text-gray-600 mt-1 leading-relaxed">
-                        {item.description}
-                      </span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        {/* Category 2: Minerals/Metals */}
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <div className="w-full h-64 md:h-96 bg-gray-200 overflow-hidden rounded-sm">
+            <img
+              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/containers.jpg"
+              alt="Shipping containers"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="flex-1">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 uppercase tracking-wide">Minerals & Metals</h3>
+            <p className="text-gray-700 leading-relaxed text-lg mb-6">
+              We are a key player in the trading of various minerals and metals, including iron ore, copper, aluminum, and precious metals. Our expertise in logistics and market analysis ensures reliable supply chains for industrial and manufacturing clients.
+            </p>
+            <ul className="list-disc list-inside text-gray-700 leading-relaxed text-lg space-y-2">
+              <li>Iron Ore</li>
+              <li>Copper</li>
+              <li>Aluminum</li>
+              <li>Precious Metals</li>
+            </ul>
+          </div>
+        </div>
+        {/* Category 3: Other Commodities */}
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <div className="w-full h-64 md:h-96 bg-gray-200 overflow-hidden rounded-sm">
+            <img
+              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/sustainability_hero.jpg"
+              alt="Sustainability hero"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="flex-1">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 uppercase tracking-wide">Other Commodities</h3>
+            <p className="text-gray-700 leading-relaxed text-lg mb-6">
+              Our portfolio also includes a diverse range of other commodities such as agricultural products, chemicals, and lumber. We leverage our global reach and market insights to provide tailored solutions for our clients.
+            </p>
+            <ul className="list-disc list-inside text-gray-700 leading-relaxed text-lg space-y-2">
+              <li>Agricultural Products</li>
+              <li>Chemicals</li>
+              <li>Lumber</li>
+            </ul>
+          </div>
         </div>
 
       </div>

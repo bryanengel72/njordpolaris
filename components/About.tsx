@@ -11,7 +11,7 @@ const About: React.FC = () => {
         {/* Image */}
         <div className="w-full h-64 md:h-96 bg-gray-200 mb-12 overflow-hidden rounded-sm">
           <img
-            src="https://picsum.photos/seed/njord_about/1920/1080"
+            src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/manhattan_skyline.jpg"
             alt="Cityscape view of Manhattan"
             className="w-full h-full object-cover"
           />
