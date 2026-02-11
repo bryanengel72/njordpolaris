@@ -2,21 +2,21 @@ import React from 'react';
 
 const Services: React.FC = () => {
   return (
-    <div id="services" className="bg-white py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Services</h2>
+    <div id="services" className="bg-white py-12 md:py-24 reveal">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center md:text-left">Our Services</h2>
 
         <div className="w-full h-64 md:h-96 bg-gray-200 mb-12 overflow-hidden rounded-sm">
-          <img 
-            src="https://picsum.photos/seed/port/1920/1080" 
-            alt="Shipping container terminal" 
+          <img
+            src="https://picsum.photos/seed/njord_services/1920/1080"
+            alt="Shipping container terminal"
             className="w-full h-full object-cover"
           />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          
+
           {/* Marketing Column */}
           <div className="flex flex-col">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 uppercase tracking-wide">Marketing</h3>

@@ -67,15 +67,15 @@ const productData: ProductCategory[] = [
 
 const Products: React.FC = () => {
   return (
-    <div id="products" className="bg-gray-50 py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Products</h2>
+    <div id="products" className="bg-gray-50 py-12 md:py-24 reveal">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Our Products</h2>
 
         <div className="w-full h-64 md:h-96 bg-gray-200 mb-12 overflow-hidden rounded-sm">
-          <img 
-            src="https://picsum.photos/seed/warehouse1/1920/1080" 
-            alt="Metal ingots in warehouse" 
+          <img
+            src="https://picsum.photos/seed/njord_products/1920/1080"
+            alt="Metal ingots in warehouse"
             className="w-full h-full object-cover"
           />
         </div>

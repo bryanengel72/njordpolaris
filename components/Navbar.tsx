@@ -7,36 +7,34 @@ const Navbar: React.FC = () => {
   const location = useLocation();
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/#about' },
-    { name: 'Products', path: '/products-services#products' },
-    { name: 'Services', path: '/products-services#services' },
-    { name: 'Contact Us', path: '/contact' },
+    { name: 'About', path: '/' },
+    { name: 'Products & Services', path: '/page-2' },
+    { name: 'Contact', path: '/page-3' },
   ];
 
   const isActive = (path: string) => {
     // Exact match for root
     if (path === '/' && location.pathname === '/' && !location.hash) return true;
-    
+
     // Check if path matches current pathname
     const [pathRoute, pathHash] = path.split('#');
     if (location.pathname === pathRoute) {
       if (!pathHash) return true; // It matches the page
       if (location.hash === `#${pathHash}`) return true; // It matches the specific section
     }
-    
+
     return false;
   };
 
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link 
-              to="/" 
-              className="text-xl tracking-[0.2em] font-medium text-[#001D00] uppercase"
+            <Link
+              to="/"
+              className="text-xl tracking-[0.2em] font-bold text-[#001D00] uppercase"
               onClick={() => setIsOpen(false)}
             >
               Njord Polaris
@@ -49,11 +47,10 @@ const Navbar: React.FC = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`px-3 py-2 text-sm font-medium transition-colors ${
-                  isActive(link.path) 
-                    ? 'text-black font-semibold' 
-                    : 'text-gray-600 hover:text-black'
-                }`}
+                className={`px-3 py-2 text-sm font-medium transition-colors ${isActive(link.path)
+                  ? 'text-black font-semibold'
+                  : 'text-gray-600 hover:text-black'
+                  }`}
               >
                 {link.name}
               </Link>
@@ -81,11 +78,10 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-4 text-base font-medium ${
-                  isActive(link.path)
-                    ? 'text-black bg-gray-50'
-                    : 'text-gray-600 hover:text-black hover:bg-gray-50'
-                }`}
+                className={`block px-3 py-4 text-base font-medium ${isActive(link.path)
+                  ? 'text-black bg-gray-50'
+                  : 'text-gray-600 hover:text-black hover:bg-gray-50'
+                  }`}
               >
                 {link.name}
               </Link>

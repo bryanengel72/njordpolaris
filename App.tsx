@@ -51,8 +51,9 @@ const ContactPage = () => (
   <Contact />
 );
 
-const App: React.FC = () => {
+const MainLayout: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,38 +64,67 @@ const App: React.FC = () => {
       }
     };
 
+    // Intersection Observer for fade-in animations
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold: 0.1
+    });
+
+    // Small delay to ensure DOM is updated after route change
+    const timer = setTimeout(() => {
+      const revealElements = document.querySelectorAll('.reveal');
+      revealElements.forEach(el => observer.observe(el));
+    }, 100);
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+      clearTimeout(timer);
+    };
+  }, [location.pathname]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <BrowserRouter>
+    <div className="min-h-screen flex flex-col">
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/products-services" element={<ProductsServicesPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-        </main>
-        <Footer />
+      <Navbar />
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/page-2" element={<ProductsServicesPage />} />
+          <Route path="/page-3" element={<ContactPage />} />
+        </Routes>
+      </main>
+      <Footer />
 
-        {showScrollTop && (
-          <button
-            onClick={scrollToTop}
-            className="fixed bottom-8 right-8 bg-gray-900 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors z-50"
-            aria-label="Scroll to top"
-          >
-            <ArrowUp size={24} />
-          </button>
-        )}
-      </div>
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 bg-gray-900 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors z-50"
+          aria-label="Scroll to top"
+        >
+          <ArrowUp size={24} />
+        </button>
+      )}
+    </div>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <MainLayout />
     </BrowserRouter>
   );
 };

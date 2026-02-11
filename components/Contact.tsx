@@ -2,20 +2,20 @@ import React from 'react';
 
 const Contact: React.FC = () => {
   return (
-    <div className="bg-gray-50 py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+    <div className="bg-gray-50 py-12 md:py-24 reveal">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Contact Us</h2>
 
         <div className="w-full h-64 md:h-96 bg-gray-200 mb-12 overflow-hidden rounded-sm">
-          <img 
-            src="https://picsum.photos/seed/singapore/1920/1080" 
-            alt="Singapore City Skyline" 
+          <img
+            src="https://picsum.photos/seed/njord_contact/1920/1080"
+            alt="Singapore City Skyline"
             className="w-full h-full object-cover"
           />
         </div>
 
-        <div className="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-sm border border-gray-100">
+        <div className="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-sm border border-gray-100">
           <form className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="flex flex-col">
