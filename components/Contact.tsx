@@ -70,8 +70,8 @@ const Contact: React.FC = () => {
 
         <div className="w-full h-64 md:h-96 bg-gray-200 mb-12 overflow-hidden rounded-sm">
           <img
-            src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/singapore_skyline.jpg"
-            alt="Singapore City Skyline"
+            src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/singapore_np.jpg"
+            alt="Singapore Cityscape"
             className="w-full h-full object-cover"
           />
         </div>
