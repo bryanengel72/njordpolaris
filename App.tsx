@@ -102,8 +102,8 @@ const MainLayout: React.FC = () => {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/page-2" element={<ProductsServicesPage />} />
-          <Route path="/page-3" element={<ContactPage />} />
+          <Route path="/products-services" element={<ProductsServicesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
       <Footer />

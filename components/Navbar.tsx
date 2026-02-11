@@ -8,8 +8,8 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'About', path: '/' },
-    { name: 'Products & Services', path: '/page-2' },
-    { name: 'Contact', path: '/page-3' },
+    { name: 'Products & Services', path: '/products-services' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   const isActive = (path: string) => {
