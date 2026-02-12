@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import { Check } from 'lucide-react';
 
 const Contact: React.FC = () => {
@@ -36,30 +37,14 @@ const Contact: React.FC = () => {
       return;
     }
 
-    // Get form data
-    const formData = new FormData(e.target as HTMLFormElement);
-    const data = {
-      firstName: formData.get('firstName'),
-      lastName: formData.get('lastName'),
-      companyName: formData.get('companyName'),
-      website: formData.get('website'),
-      email: formData.get('email'),
-      phone: formData.get('phone'),
-      message: formData.get('message'),
-    };
-
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to send message');
-      }
+      // Send email using EmailJS
+      await emailjs.sendForm(
+        'YOUR_SERVICE_ID',      // You'll replace this
+        'YOUR_TEMPLATE_ID',     // You'll replace this
+        e.target as HTMLFormElement,
+        'YOUR_PUBLIC_KEY'       // You'll replace this
+      );
 
       // Success
       setIsSubmitted(true);
