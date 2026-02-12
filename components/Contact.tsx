@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
     setUserAnswer('');
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
 
@@ -36,8 +36,37 @@ const Contact: React.FC = () => {
       return;
     }
 
-    // Success
-    setIsSubmitted(true);
+    // Get form data
+    const formData = new FormData(e.target as HTMLFormElement);
+    const data = {
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
+      companyName: formData.get('companyName'),
+      website: formData.get('website'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      // Success
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setError('Failed to send message. Please try again.');
+    }
   };
 
   if (isSubmitted) {
@@ -93,39 +122,39 @@ const Contact: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="flex flex-col">
                 <label htmlFor="firstName" className="text-sm font-medium text-gray-700 mb-2">First Name*</label>
-                <input type="text" id="firstName" className="border-b border-gray-300 focus:border-[#001D00] focus:outline-none py-2 transition-colors bg-transparent" required />
+                <input type="text" id="firstName" name="firstName" className="border-b border-gray-300 focus:border-[#001D00] focus:outline-none py-2 transition-colors bg-transparent" required />
               </div>
               <div className="flex flex-col">
                 <label htmlFor="lastName" className="text-sm font-medium text-gray-700 mb-2">Last Name*</label>
-                <input type="text" id="lastName" className="border-b border-gray-300 focus:border-[#001D00] focus:outline-none py-2 transition-colors bg-transparent" required />
+                <input type="text" id="lastName" name="lastName" className="border-b border-gray-300 focus:border-[#001D00] focus:outline-none py-2 transition-colors bg-transparent" required />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="flex flex-col">
                 <label htmlFor="companyName" className="text-sm font-medium text-gray-700 mb-2">Company Name*</label>
-                <input type="text" id="companyName" className="border-b border-gray-300 focus:border-[#001D00] focus:outline-none py-2 transition-colors bg-transparent" required />
+                <input type="text" id="companyName" name="companyName" className="border-b border-gray-300 focus:border-[#001D00] focus:outline-none py-2 transition-colors bg-transparent" required />
               </div>
               <div className="flex flex-col">
                 <label htmlFor="website" className="text-sm font-medium text-gray-700 mb-2">Company Website</label>
-                <input type="url" id="website" className="border-b border-gray-300 focus:border-[#001D00] focus:outline-none py-2 transition-colors bg-transparent" />
+                <input type="url" id="website" name="website" className="border-b border-gray-300 focus:border-[#001D00] focus:outline-none py-2 transition-colors bg-transparent" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="flex flex-col">
                 <label htmlFor="email" className="text-sm font-medium text-gray-700 mb-2">Business Email*</label>
-                <input type="email" id="email" className="border-b border-gray-300 focus:border-[#001D00] focus:outline-none py-2 transition-colors bg-transparent" required />
+                <input type="email" id="email" name="email" className="border-b border-gray-300 focus:border-[#001D00] focus:outline-none py-2 transition-colors bg-transparent" required />
               </div>
               <div className="flex flex-col">
                 <label htmlFor="phone" className="text-sm font-medium text-gray-700 mb-2">Phone*</label>
-                <input type="tel" id="phone" className="border-b border-gray-300 focus:border-[#001D00] focus:outline-none py-2 transition-colors bg-transparent" required />
+                <input type="tel" id="phone" name="phone" className="border-b border-gray-300 focus:border-[#001D00] focus:outline-none py-2 transition-colors bg-transparent" required />
               </div>
             </div>
 
             <div className="flex flex-col">
               <label htmlFor="message" className="text-sm font-medium text-gray-700 mb-2">Message*</label>
-              <textarea id="message" rows={4} className="border-b border-gray-300 focus:border-[#001D00] focus:outline-none py-2 transition-colors bg-transparent resize-none" required></textarea>
+              <textarea id="message" name="message" rows={4} className="border-b border-gray-300 focus:border-[#001D00] focus:outline-none py-2 transition-colors bg-transparent resize-none" required></textarea>
             </div>
 
             {/* Human Verification */}
