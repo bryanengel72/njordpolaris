@@ -2,24 +2,25 @@ import React from 'react';
 
 const Services: React.FC = () => {
   return (
-    <div id="services" className="bg-white py-12 md:py-24 reveal">
-      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+    <div id="services" className="bg-white reveal">
+      {/* Full-width Image */}
+      <div className="w-full bg-white">
+        <img
+          src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/containers_np.jpg"
+          alt="Logistics and Container Shipping"
+          className="w-full h-auto block"
+        />
+      </div>
 
+      {/* Content Section */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-12 md:py-24" style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center md:text-left">Our Services</h2>
-
-        <div className="w-full h-64 md:h-96 bg-gray-200 mb-12 overflow-hidden rounded-sm">
-          <img
-            src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/singapore_skyline.jpg"
-            alt="Shipping container terminal"
-            className="w-full h-full object-cover"
-          />
-        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
           {/* Marketing Column */}
           <div className="flex flex-col">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 uppercase tracking-wide">Marketing</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 tracking-wide">Marketing</h3>
             <div className="text-gray-700 leading-relaxed space-y-4">
               <p>
                 As a leading marketer of physical commodities, we specialize in sourcing raw materials, industrial goods, and wholesale products, delivering them to customers worldwide. Our operations ensure seamless transportation from origin to destination, meeting the precise schedules, quality standards, and specifications required by our clients.
@@ -35,13 +36,13 @@ const Services: React.FC = () => {
 
           {/* Suppliers Column */}
           <div className="flex flex-col">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 uppercase tracking-wide">Suppliers</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 tracking-wide">Suppliers</h3>
             <div className="text-gray-700 leading-relaxed space-y-4">
               <p>
                 We are committed to partnering with suppliers who share our dedication to sustainability and ethical practices. We establish rigorous expectations for environmental, social, and governance (ESG) performance, carefully selecting suppliers who align with our sustainability objectives.
               </p>
               <p>
-                Our evaluation process prioritizes suppliers’ commitment to worker safety, environmental protection through minimal or no pollution, respect for human rights, strict adherence to anti-child labor and anti-slavery policies, high ethical standards, and responsible management of waste sites, including landfills and tailings.
+                Our evaluation process prioritizes suppliers' commitment to worker safety, environmental protection through minimal or no pollution, respect for human rights, strict adherence to anti-child labor and anti-slavery policies, high ethical standards, and responsible management of waste sites, including landfills and tailings.
               </p>
               <p>
                 We qualify suppliers based on three key pillars: integrity, consistency, and transparency. Integrity ensures suppliers comply with all applicable laws and uphold high social and environmental standards. Consistency guarantees reliable delivery of products. Transparency enables proactive problem-solving.
@@ -51,7 +52,7 @@ const Services: React.FC = () => {
 
           {/* Sustainability Column */}
           <div className="flex flex-col">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 uppercase tracking-wide">Sustainability</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 tracking-wide">Sustainability</h3>
             <div className="text-gray-700 leading-relaxed space-y-4">
               <p>
                 Operating in over 70 countries, we engage with diverse approaches to managing current and future resources. Recognizing our shared responsibility to protect the planet, we are committed to preserving its resources for future generations. Our operations prioritize safety, effective impact management, and the promotion of sustainable, positive outcomes for both the environment and the communities we serve.

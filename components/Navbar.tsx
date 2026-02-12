@@ -8,7 +8,8 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'About', path: '/' },
-    { name: 'Products & Services', path: '/products-services' },
+    { name: 'Products', path: '/products' },
+    { name: 'Services', path: '/services' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -34,14 +35,9 @@ const Navbar: React.FC = () => {
           <div className="flex-shrink-0 flex items-center">
             <Link
               to="/"
-              className="flex items-center gap-3 group"
+              className="flex items-center group"
               onClick={() => setIsOpen(false)}
             >
-              <img
-                src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/logo.jpg"
-                alt="Njord Polaris Logo"
-                className="w-10 h-10 object-cover rounded-sm"
-              />
               <span className="text-xl tracking-[0.2em] font-bold text-[#001D00] uppercase">
                 Njord Polaris
               </span>

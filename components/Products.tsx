@@ -72,13 +72,22 @@ const Products: React.FC = () => {
 
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Our Products</h2>
 
+        {/* Featured Page Image: Ingots */}
+        <div className="w-full bg-white mb-20">
+          <img
+            src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/ingots_np.jpg"
+            alt="Commodity Metal Ingots"
+            className="w-full h-auto rounded-sm shadow-sm"
+          />
+        </div>
+
         {/* Category 1: Energy */}
         <div className="flex flex-col lg:flex-row gap-12 items-center">
-          <div className="w-full h-64 md:h-96 bg-gray-200 overflow-hidden rounded-sm">
+          <div className="w-full md:w-1/2 bg-white">
             <img
-              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/oil_tank.jpg"
+              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/oil_tank_np.jpg"
               alt="Crude oil tank"
-              className="w-full h-full object-cover"
+              className="w-full h-auto rounded-sm shadow-sm"
             />
           </div>
           <div className="flex-1">
@@ -96,11 +105,11 @@ const Products: React.FC = () => {
         </div>
         {/* Category 2: Minerals/Metals */}
         <div className="flex flex-col lg:flex-row gap-12 items-center">
-          <div className="w-full h-64 md:h-96 bg-gray-200 overflow-hidden rounded-sm">
+          <div className="w-full md:w-1/2 bg-white">
             <img
-              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/containers.jpg"
-              alt="Shipping containers"
-              className="w-full h-full object-cover"
+              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/ingots_np.jpg"
+              alt="Metal ingots"
+              className="w-full h-auto rounded-sm shadow-sm"
             />
           </div>
           <div className="flex-1">
@@ -118,11 +127,11 @@ const Products: React.FC = () => {
         </div>
         {/* Category 3: Other Commodities */}
         <div className="flex flex-col lg:flex-row gap-12 items-center">
-          <div className="w-full h-64 md:h-96 bg-gray-200 overflow-hidden rounded-sm">
+          <div className="w-full md:w-1/2 bg-white">
             <img
-              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/sustainability_hero.jpg"
-              alt="Sustainability hero"
-              className="w-full h-full object-cover"
+              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/containers_np.jpg"
+              alt="Shipping containers terminal"
+              className="w-full h-auto rounded-sm shadow-sm"
             />
           </div>
           <div className="flex-1">

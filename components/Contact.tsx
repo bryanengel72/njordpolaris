@@ -68,11 +68,11 @@ const Contact: React.FC = () => {
 
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Contact Us</h2>
 
-        <div className="w-full h-64 md:h-96 bg-gray-200 mb-12 overflow-hidden rounded-sm">
+        <div className="w-full bg-white mb-12">
           <img
             src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/singapore_np.jpg"
             alt="Singapore Cityscape"
-            className="w-full h-full object-cover"
+            className="w-full h-auto rounded-sm shadow-sm"
           />
         </div>
 

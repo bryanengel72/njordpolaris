@@ -40,11 +40,12 @@ const HomePage = () => (
   </>
 );
 
-const ProductsServicesPage = () => (
-  <>
-    <Products />
-    <Services />
-  </>
+const ProductsPage = () => (
+  <Products />
+);
+
+const ServicesPage = () => (
+  <Services />
 );
 
 const ContactPage = () => (
@@ -102,7 +103,8 @@ const MainLayout: React.FC = () => {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/products-services" element={<ProductsServicesPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/services" element={<ServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>

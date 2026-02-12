@@ -4,13 +4,13 @@ const Hero: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Image Container */}
-      <div className="w-full h-[60vh] md:h-[80vh] bg-gray-200 relative overflow-hidden">
+      <div className="w-full bg-gray-50 relative">
         <img
-          src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/oil_tank.jpg"
+          src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/oil_tank_np.jpg"
           alt="Crude oil tank"
-          className="w-full h-full object-cover"
+          className="w-full h-auto block"
         />
-        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
       </div>
 
       {/* Hero Text Content */}

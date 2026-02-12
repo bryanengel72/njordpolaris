@@ -2,20 +2,20 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <div id="about" className="bg-white py-12 md:py-24 reveal">
-      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+    <div id="about" className="bg-white reveal">
+      {/* Full-width Image */}
+      <div className="w-full bg-white">
+        <img
+          src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/manhattan_np.jpg"
+          alt="Cityscape view of Manhattan"
+          className="w-full h-auto block"
+        />
+      </div>
 
+      {/* Content Section */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-12 md:py-24">
         {/* Section Header */}
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">About Us</h2>
-
-        {/* Image */}
-        <div className="w-full h-64 md:h-96 bg-gray-200 mb-12 overflow-hidden rounded-sm">
-          <img
-            src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/manhattan_skyline.jpg"
-            alt="Cityscape view of Manhattan"
-            className="w-full h-full object-cover"
-          />
-        </div>
 
         {/* Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-gray-700 leading-relaxed text-lg">
