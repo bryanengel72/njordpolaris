@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
 
         <div className="w-full bg-white mb-12">
           <img
-            src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/singapore_np.jpg"
+            src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/singapore_np.jpeg"
             alt="Singapore Cityscape"
             className="w-full h-auto rounded-sm shadow-sm"
           />

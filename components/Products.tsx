@@ -22,7 +22,7 @@ const productData: ProductCategory[] = [
     ]
   },
   {
-    title: "Ferrous",
+    title: "Ferrous Metals",
     items: [
       { name: "Iron (Fe)", description: "Ores" },
       { name: "Ferrous products", description: "Pig Iron (Basic, Foundry, Nodular, Direct Reduced Iron (DRI), Hot Briquetted Iron (HBI)" },
@@ -32,7 +32,7 @@ const productData: ProductCategory[] = [
     ]
   },
   {
-    title: "Non-Ferrous",
+    title: "Non-Ferrous Metals",
     items: [
       { name: "Aluminium (Al)", description: "Ingots, billets, scrap" },
       { name: "Copper (Cu)", description: "Ingots, scrap" },
@@ -71,7 +71,7 @@ const Products: React.FC = () => {
       {/* Full-width Image */}
       <div className="w-full bg-white">
         <img
-          src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/ingots_np.jpg"
+          src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/ingots_np.jpeg"
           alt="Commodity Metal Ingots"
           className="w-full h-auto block"
         />

@@ -6,7 +6,7 @@ const About: React.FC = () => {
       {/* Full-width Image */}
       <div className="w-full bg-white">
         <img
-          src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/manhattan_np.jpg"
+          src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/manhattan_np.jpeg"
           alt="Cityscape view of Manhattan"
           className="w-full h-auto block"
         />

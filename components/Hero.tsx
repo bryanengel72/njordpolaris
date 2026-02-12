@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
       {/* Hero Image Container */}
       <div className="w-full bg-gray-50 relative">
         <img
-          src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/oil_tank_np.jpg"
+          src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/containers_np.jpeg"
           alt="Crude oil tank"
           className="w-full h-auto block"
         />
