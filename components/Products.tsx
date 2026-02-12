@@ -67,86 +67,38 @@ const productData: ProductCategory[] = [
 
 const Products: React.FC = () => {
   return (
-    <div id="products" className="bg-gray-50 py-12 md:py-24 reveal">
-      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 space-y-20">
+    <div id="products" className="bg-gray-50 reveal">
+      {/* Full-width Image */}
+      <div className="w-full bg-white">
+        <img
+          src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/ingots_np.jpg"
+          alt="Commodity Metal Ingots"
+          className="w-full h-auto block"
+        />
+      </div>
 
+      {/* Content Section */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-12 md:py-24">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Our Products</h2>
 
-        {/* Featured Page Image: Ingots */}
-        <div className="w-full bg-white mb-20">
-          <img
-            src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/ingots_np.jpg"
-            alt="Commodity Metal Ingots"
-            className="w-full h-auto rounded-sm shadow-sm"
-          />
+        {/* Product Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {productData.map((category) => (
+            <div key={category.title} className="bg-white p-6 border border-gray-200 shadow-sm">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 tracking-wide">{category.title}</h3>
+              <div className="space-y-3">
+                {category.items.map((item, index) => (
+                  <div key={index} className="text-gray-700">
+                    <p className="font-semibold text-sm">{item.name}</p>
+                    {item.description && (
+                      <p className="text-xs text-gray-600 mt-1">{item.description}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
-
-        {/* Category 1: Energy */}
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
-          <div className="w-full md:w-1/2 bg-white">
-            <img
-              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/oil_tank_np.jpg"
-              alt="Crude oil tank"
-              className="w-full h-auto rounded-sm shadow-sm"
-            />
-          </div>
-          <div className="flex-1">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 uppercase tracking-wide">Energy</h3>
-            <p className="text-gray-700 leading-relaxed text-lg mb-6">
-              We trade and transport a wide range of energy commodities, including crude oil, natural gas, refined petroleum products, and biofuels. Our global network ensures efficient sourcing and delivery to meet the world's growing energy demands.
-            </p>
-            <ul className="list-disc list-inside text-gray-700 leading-relaxed text-lg space-y-2">
-              <li>Crude Oil</li>
-              <li>Natural Gas</li>
-              <li>Refined Petroleum Products</li>
-              <li>Biofuels</li>
-            </ul>
-          </div>
-        </div>
-        {/* Category 2: Minerals/Metals */}
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
-          <div className="w-full md:w-1/2 bg-white">
-            <img
-              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/ingots_np.jpg"
-              alt="Metal ingots"
-              className="w-full h-auto rounded-sm shadow-sm"
-            />
-          </div>
-          <div className="flex-1">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 uppercase tracking-wide">Minerals & Metals</h3>
-            <p className="text-gray-700 leading-relaxed text-lg mb-6">
-              We are a key player in the trading of various minerals and metals, including iron ore, copper, aluminum, and precious metals. Our expertise in logistics and market analysis ensures reliable supply chains for industrial and manufacturing clients.
-            </p>
-            <ul className="list-disc list-inside text-gray-700 leading-relaxed text-lg space-y-2">
-              <li>Iron Ore</li>
-              <li>Copper</li>
-              <li>Aluminum</li>
-              <li>Precious Metals</li>
-            </ul>
-          </div>
-        </div>
-        {/* Category 3: Other Commodities */}
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
-          <div className="w-full md:w-1/2 bg-white">
-            <img
-              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/containers_np.jpg"
-              alt="Shipping containers terminal"
-              className="w-full h-auto rounded-sm shadow-sm"
-            />
-          </div>
-          <div className="flex-1">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 uppercase tracking-wide">Other Commodities</h3>
-            <p className="text-gray-700 leading-relaxed text-lg mb-6">
-              Our portfolio also includes a diverse range of other commodities such as agricultural products, chemicals, and lumber. We leverage our global reach and market insights to provide tailored solutions for our clients.
-            </p>
-            <ul className="list-disc list-inside text-gray-700 leading-relaxed text-lg space-y-2">
-              <li>Agricultural Products</li>
-              <li>Chemicals</li>
-              <li>Lumber</li>
-            </ul>
-          </div>
-        </div>
-
       </div>
     </div>
   );

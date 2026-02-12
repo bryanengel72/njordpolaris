@@ -13,7 +13,7 @@ const Services: React.FC = () => {
       </div>
 
       {/* Content Section */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-12 md:py-24" style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}>
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-12 md:py-24">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center md:text-left">Our Services</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
