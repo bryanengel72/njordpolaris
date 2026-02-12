@@ -50,9 +50,9 @@ const Navbar: React.FC = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`px-3 py-2 text-sm font-medium transition-colors ${isActive(link.path)
-                  ? 'text-black font-semibold'
-                  : 'text-gray-600 hover:text-black'
+                className={`px-3 py-2 rounded text-sm font-medium transition-colors ${isActive(link.path)
+                  ? 'text-white bg-[#001D00] font-semibold'
+                  : 'text-gray-600 hover:text-white hover:bg-[#001D00]'
                   }`}
               >
                 {link.name}
@@ -81,9 +81,9 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-4 text-base font-medium ${isActive(link.path)
-                  ? 'text-black bg-gray-50'
-                  : 'text-gray-600 hover:text-black hover:bg-gray-50'
+                className={`block px-3 py-4 rounded text-base font-medium ${isActive(link.path)
+                  ? 'text-white bg-[#001D00]'
+                  : 'text-gray-600 hover:text-white hover:bg-[#001D00]'
                   }`}
               >
                 {link.name}
