@@ -3,12 +3,14 @@ import React from 'react';
 const Hero: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
-      {/* Hero Image Container */}
-      <div className="w-full bg-gray-50 relative">
-        <img
-          src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/containers_np.jpeg"
-          alt="Crude oil tank"
-          className="w-full h-auto block"
+      {/* Hero Video Container */}
+      <div className="w-full bg-gray-50 relative" style={{ paddingBottom: '56.25%' }}>
+        <iframe
+          className="absolute top-0 left-0 w-full h-full"
+          src="https://www.youtube.com/embed/4Uq1MsovMqc?autoplay=1&mute=1&loop=1&playlist=4Uq1MsovMqc&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+          title="Njord Polaris Hero Video"
+          allow="autoplay; encrypted-media"
+          style={{ border: 'none' }}
         />
         <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
       </div>
