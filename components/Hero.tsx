@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
       <div className="w-full bg-gray-50 relative" style={{ paddingBottom: '56.25%' }}>
         <iframe
           className="absolute top-0 left-0 w-full h-full"
-          src="https://www.youtube.com/embed/4Uq1MsovMqc?autoplay=1&mute=1&loop=1&playlist=4Uq1MsovMqc&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+          src="https://drive.google.com/file/d/1ewlinFO7gi68WrbDG1JWA7Vgb8IDACP_/preview"
           title="Njord Polaris Hero Video"
           allow="autoplay; encrypted-media"
           style={{ border: 'none' }}
