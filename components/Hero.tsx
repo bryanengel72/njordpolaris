@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
           playsInline
           style={{ display: 'block' }}
         >
-          <source src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/NjoredPolaris.mp4" type="video/mp4" />
+          <source src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/NjordPolaris.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
