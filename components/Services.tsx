@@ -2,11 +2,11 @@ import React from 'react';
 
 const Services: React.FC = () => {
   return (
-    <div id="services" className="bg-gray-50 py-12 md:py-24 reveal">
-      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+    <div id="services" className="bg-gray-50 pt-2 pb-8 md:pt-2 md:pb-12 reveal scroll-mt-28">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
 
         {/* Full-width Image */}
-        <div className="w-full bg-white mb-12">
+        <div className="w-full bg-white mb-6">
           <img
             src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/containers_np.jpeg"
             alt="Logistics and Container Shipping"
@@ -15,7 +15,7 @@ const Services: React.FC = () => {
         </div>
 
         {/* Content Section */}
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center md:text-left">Our Services</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center md:text-left">Our Services</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 

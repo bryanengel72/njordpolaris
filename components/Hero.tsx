@@ -4,23 +4,27 @@ const Hero: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Video Container */}
-      <div className="w-full bg-gray-50 relative overflow-hidden">
-        <video
-          className="w-full h-auto block"
-          autoPlay
-          muted
-          loop
-          playsInline
-          style={{ display: 'block' }}
-        >
-          <source src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/NjordPolaris.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
+      <div className="w-full bg-gray-50 relative">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 pt-2 md:pt-2">
+          <div className="relative overflow-hidden rounded-sm shadow-sm">
+            <video
+              className="w-full h-auto block"
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{ display: 'block' }}
+            >
+              <source src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/NjordPolaris.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
+          </div>
+        </div>
       </div>
 
       {/* Hero Text Content */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-12 md:py-24 w-full reveal">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-12 md:py-24 w-full reveal">
         <div className="max-w-3xl">
           <h1 className="text-3xl md:text-6xl font-bold text-gray-900 leading-tight">
             One Planet.<br />

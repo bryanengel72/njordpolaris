@@ -77,18 +77,20 @@ const Contact: React.FC = () => {
   }
 
   return (
-    <div className="bg-gray-50 py-12 md:py-24 reveal">
+    <div className="bg-gray-50 pt-2 pb-8 md:pt-2 md:pb-12 reveal">
       <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
 
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Contact Us</h2>
-
-        <div className="w-full bg-white mb-12">
+        {/* Image Section First */}
+        <div className="w-full bg-white mb-6">
           <img
             src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/singapore_np.jpeg"
             alt="Singapore Cityscape"
             className="w-full h-auto rounded-sm shadow-sm"
           />
         </div>
+
+        {/* Header Section Second */}
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
 
         <div className="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-sm border border-gray-100">
           <form className="space-y-8" onSubmit={handleSubmit}>
