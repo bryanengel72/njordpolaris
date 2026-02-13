@@ -1,8 +1,9 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const About: React.FC = () => {
   return (
-    <div id="about" className="bg-gray-50 pt-2 pb-8 md:pt-2 md:pb-12 reveal scroll-mt-28">
+    <div id="about" className="bg-gray-50 pt-2 pb-8 md:pt-2 md:pb-12 scroll-mt-28">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
 
         {/* Full-width Image */}
@@ -15,11 +16,24 @@ const About: React.FC = () => {
         </div>
 
         {/* Section Header */}
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Us</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+        >
+          About Us
+        </motion.h2>
 
         {/* Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-gray-700 leading-relaxed text-lg">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <p className="mb-6">
               As a privately held company and a dynamic leader in the global commodities market, we maintain a
               streamlined structure to maximize operational efficiency and believe that strong supply chains are
@@ -27,8 +41,13 @@ const About: React.FC = () => {
               exceptional value to our suppliers and customers worldwide. By fostering strong partnerships, we
               create sustainable, forward-thinking solutions that meet the evolving needs of our stakeholders.
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
             <p>
               Our purpose is to responsibly source the commodities we supply to advance everyday life. It is a part
               of a value chain, benefiting the growth of our suppliers and our customers, and only when everybody
@@ -36,7 +55,7 @@ const About: React.FC = () => {
               and of our diversified portfolio of products, to bring competitive advantages to our trading partners,
               and to support their own growth innovations.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
