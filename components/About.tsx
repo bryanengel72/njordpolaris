@@ -2,18 +2,18 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <div id="about" className="bg-white reveal">
-      {/* Full-width Image */}
-      <div className="w-full bg-white">
-        <img
-          src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/manhattan_np.jpeg"
-          alt="Cityscape view of Manhattan"
-          className="w-full h-auto rounded-sm shadow-sm"
-        />
-      </div>
+    <div id="about" className="bg-gray-50 py-12 md:py-24 reveal">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
 
-      {/* Content Section */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-12 md:py-24">
+        {/* Full-width Image */}
+        <div className="w-full bg-white mb-12">
+          <img
+            src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/manhattan_np.jpeg"
+            alt="Cityscape view of Manhattan"
+            className="w-full h-auto rounded-sm shadow-sm"
+          />
+        </div>
+
         {/* Section Header */}
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">About Us</h2>
 
