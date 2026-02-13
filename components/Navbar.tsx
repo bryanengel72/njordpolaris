@@ -27,8 +27,31 @@ const Navbar: React.FC = () => {
     return false;
   };
 
+  // Check if we are on the home page (either root '/' or an anchor on root)
+  const isHomePage = location.pathname === '/' || location.pathname.startsWith('/#');
+
+  // Define styles based on page location
+  const navBgClass = isHomePage
+    ? "bg-white/95 backdrop-blur-sm border-gray-100 text-[#001D00]"
+    : "bg-[#001D00] border-[#001D00] text-white";
+
+  const logoSrc = isHomePage
+    ? "https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Njord%20Polaris%20(8%20x%202%20in)%20Black.svg"
+    : "https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Njord%20Polaris%20(8%20x%202%20in)%20White.svg";
+
+  const linkActiveStyle = isHomePage
+    ? "text-white bg-[#001D00] font-semibold"
+    : "text-[#001D00] bg-white font-semibold";
+
+  const linkInactiveStyle = isHomePage
+    ? "text-gray-600 hover:text-white hover:bg-[#001D00]"
+    : "text-gray-300 hover:text-white hover:bg-white/10";
+
+  const mobileMenuBg = isHomePage ? "bg-white border-gray-100" : "bg-[#001D00] border-white/10";
+  const mobileButtonColor = isHomePage ? "text-gray-600 hover:text-black" : "text-white hover:text-gray-300";
+
   return (
-    <nav className="sticky top-0 z-50 bg-[#001D00] text-white shadow-sm border-b border-[#001D00]">
+    <nav className={`sticky top-0 z-50 shadow-sm border-b transition-colors duration-300 ${navBgClass}`}>
       <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -39,7 +62,7 @@ const Navbar: React.FC = () => {
               onClick={() => setIsOpen(false)}
             >
               <img
-                src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Njord%20Polaris%20(8%20x%202%20in)%20White.svg"
+                src={logoSrc}
                 alt="Njord Polaris"
                 className="h-12 w-auto"
               />
@@ -53,8 +76,8 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 to={link.path}
                 className={`px-3 py-2 rounded text-sm font-medium transition-colors ${isActive(link.path)
-                  ? 'text-[#001D00] bg-white font-semibold'
-                  : 'text-gray-300 hover:text-white hover:bg-white/10'
+                  ? linkActiveStyle
+                  : linkInactiveStyle
                   }`}
               >
                 {link.name}
@@ -66,7 +89,7 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-gray-300 focus:outline-none"
+              className={`${mobileButtonColor} focus:outline-none`}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -76,7 +99,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#001D00] border-t border-white/10 absolute w-full shadow-lg">
+        <div className={`md:hidden absolute w-full shadow-lg border-t ${mobileMenuBg}`}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link
@@ -84,8 +107,8 @@ const Navbar: React.FC = () => {
                 to={link.path}
                 onClick={() => setIsOpen(false)}
                 className={`block px-3 py-4 rounded text-base font-medium ${isActive(link.path)
-                  ? 'text-[#001D00] bg-white'
-                  : 'text-gray-300 hover:text-white hover:bg-white/10'
+                  ? linkActiveStyle
+                  : linkInactiveStyle
                   }`}
               >
                 {link.name}
