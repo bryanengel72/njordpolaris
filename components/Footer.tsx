@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <img
-              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Njord%20Polaris%20(8%20x%202%20in)%20White.svg"
+              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Njord%20Polaris_White.svg"
               alt="Njord Polaris"
               className="h-10 w-auto"
             />
