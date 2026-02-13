@@ -6,7 +6,11 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <h3 className="text-2xl font-medium tracking-widest uppercase text-white" style={{ fontFamily: "'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', serif" }}>Njord Polaris</h3>
+            <img
+              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Njord%20Polaris%20(8%20x%202%20in)%20White.svg"
+              alt="Njord Polaris"
+              className="h-10 w-auto"
+            />
           </div>
           <div className="text-gray-400 text-sm">
             &copy; {new Date().getFullYear()} Njord Polaris. All rights reserved.

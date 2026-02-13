@@ -38,9 +38,11 @@ const Navbar: React.FC = () => {
               className="flex items-center group"
               onClick={() => setIsOpen(false)}
             >
-              <span className="text-xl tracking-[0.2em] font-bold text-white uppercase" style={{ fontFamily: "'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', serif" }}>
-                Njord Polaris
-              </span>
+              <img
+                src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Njord%20Polaris%20(8%20x%202%20in)%20White.svg"
+                alt="Njord Polaris"
+                className="h-12 w-auto"
+              />
             </Link>
           </div>
 
