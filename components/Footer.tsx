@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
               className="h-10 w-auto"
             />
           </div>
-          <div className="text-gray-400 text-sm">
+          <div className="text-white text-sm">
             &copy; {new Date().getFullYear()} Njord Polaris. All rights reserved.
           </div>
         </div>
