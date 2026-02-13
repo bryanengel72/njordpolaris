@@ -29,18 +29,28 @@ const Navbar: React.FC = () => {
 
 
 
+  // Check if we are on the home page (either root '/' or an anchor on root)
+  const isHomePage = location.pathname === '/' || location.pathname.startsWith('/#');
+
   // Define styles based on page location
-  // Always use the white background style with dark green accents
-  const navBgClass = "bg-white/95 backdrop-blur-sm border-gray-100 text-[#001D00]";
+  const navBgClass = isHomePage
+    ? "bg-white/95 backdrop-blur-sm border-gray-100 text-[#001D00]"
+    : "bg-[#001D00] border-[#001D00] text-white";
 
-  const logoSrc = "https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Njord%20Polaris_DarkGreen.svg?v=2";
+  const logoSrc = isHomePage
+    ? "https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Njord%20Polaris_DarkGreen.svg?v=2"
+    : "https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Njord%20Polaris_White.svg";
 
-  const linkActiveStyle = "text-white bg-[#001D00] font-semibold";
+  const linkActiveStyle = isHomePage
+    ? "text-white bg-[#001D00] font-semibold"
+    : "text-[#001D00] bg-white font-semibold";
 
-  const linkInactiveStyle = "text-gray-600 hover:text-white hover:bg-[#001D00]";
+  const linkInactiveStyle = isHomePage
+    ? "text-gray-600 hover:text-white hover:bg-[#001D00]"
+    : "text-gray-300 hover:text-white hover:bg-white/10";
 
-  const mobileMenuBg = "bg-white border-gray-100";
-  const mobileButtonColor = "text-gray-600 hover:text-[#001D00]";
+  const mobileMenuBg = isHomePage ? "bg-white border-gray-100" : "bg-[#001D00] border-white/10";
+  const mobileButtonColor = isHomePage ? "text-gray-600 hover:text-black" : "text-white hover:text-gray-300";
 
   return (
     <nav className={`sticky top-0 z-50 shadow-sm border-b transition-colors duration-300 ${navBgClass}`}>
