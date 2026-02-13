@@ -8,7 +8,7 @@ const Services: React.FC = () => {
         <img
           src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/containers_np.jpeg"
           alt="Logistics and Container Shipping"
-          className="w-full h-auto block"
+          className="w-full h-auto rounded-sm shadow-sm"
         />
       </div>
 

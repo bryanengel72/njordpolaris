@@ -73,7 +73,7 @@ const Products: React.FC = () => {
         <img
           src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/ingots_np.jpeg"
           alt="Commodity Metal Ingots"
-          className="w-full h-auto block"
+          className="w-full h-auto rounded-sm shadow-sm"
         />
       </div>
 
