@@ -35,9 +35,9 @@ const Navbar: React.FC = () => {
 
   const logoSrc = "https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Njord%20Polaris_DarkGreen.svg?v=2";
 
-  const linkActiveStyle = "text-[#001D00] bg-gray-100 font-semibold";
+  const linkActiveStyle = "text-white bg-[#001D00] font-semibold";
 
-  const linkInactiveStyle = "text-gray-600 hover:text-[#001D00] hover:bg-gray-50";
+  const linkInactiveStyle = "text-gray-600 hover:text-white hover:bg-[#001D00]";
 
   const mobileMenuBg = "bg-white border-gray-100";
   const mobileButtonColor = "text-gray-600 hover:text-[#001D00]";
