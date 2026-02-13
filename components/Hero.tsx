@@ -4,22 +4,21 @@ const Hero: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Video Container */}
-      <div className="w-full bg-gray-50 relative">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 pt-2 md:pt-2">
-          <div className="relative overflow-hidden rounded-sm shadow-sm">
-            <video
-              className="w-full h-auto block"
-              autoPlay
-              muted
-              loop
-              playsInline
-              style={{ display: 'block' }}
-            >
-              <source src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/NjordPolaris.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
-          </div>
+      {/* Hero Video Container */}
+      <div className="w-full relative">
+        <div className="relative w-full overflow-hidden">
+          <video
+            className="w-full h-auto block object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            style={{ display: 'block' }}
+          >
+            <source src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/NjordPolaris.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
         </div>
       </div>
 
