@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-[#001D00] text-white shadow-sm border-b border-[#001D00]">
       <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
               className="flex items-center group"
               onClick={() => setIsOpen(false)}
             >
-              <span className="text-xl tracking-[0.2em] font-bold text-[#001D00] uppercase" style={{ fontFamily: "'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', serif" }}>
+              <span className="text-xl tracking-[0.2em] font-bold text-white uppercase" style={{ fontFamily: "'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', serif" }}>
                 Njord Polaris
               </span>
             </Link>
@@ -51,8 +51,8 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 to={link.path}
                 className={`px-3 py-2 rounded text-sm font-medium transition-colors ${isActive(link.path)
-                  ? 'text-white bg-[#001D00] font-semibold'
-                  : 'text-gray-600 hover:text-white hover:bg-[#001D00]'
+                  ? 'text-[#001D00] bg-white font-semibold'
+                  : 'text-gray-300 hover:text-white hover:bg-white/10'
                   }`}
               >
                 {link.name}
@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-black focus:outline-none"
+              className="text-white hover:text-gray-300 focus:outline-none"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+        <div className="md:hidden bg-[#001D00] border-t border-white/10 absolute w-full shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <Link
@@ -82,8 +82,8 @@ const Navbar: React.FC = () => {
                 to={link.path}
                 onClick={() => setIsOpen(false)}
                 className={`block px-3 py-4 rounded text-base font-medium ${isActive(link.path)
-                  ? 'text-white bg-[#001D00]'
-                  : 'text-gray-600 hover:text-white hover:bg-[#001D00]'
+                  ? 'text-[#001D00] bg-white'
+                  : 'text-gray-300 hover:text-white hover:bg-white/10'
                   }`}
               >
                 {link.name}
