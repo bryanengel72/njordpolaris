@@ -4,14 +4,18 @@ const Hero: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Video Container */}
-      <div className="w-full bg-gray-50 relative" style={{ paddingBottom: '56.25%' }}>
-        <iframe
-          className="absolute top-0 left-0 w-full h-full"
-          src="https://drive.google.com/file/d/1ewlinFO7gi68WrbDG1JWA7Vgb8IDACP_/preview"
-          title="Njord Polaris Hero Video"
-          allow="autoplay; encrypted-media"
-          style={{ border: 'none' }}
-        />
+      <div className="w-full bg-gray-50 relative overflow-hidden">
+        <video
+          className="w-full h-auto block"
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{ display: 'block' }}
+        >
+          <source src="https://drive.google.com/uc?export=download&id=1ewlinFO7gi68WrbDG1JWA7Vgb8IDACP_" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
       </div>
 
