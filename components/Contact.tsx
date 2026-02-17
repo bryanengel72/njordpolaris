@@ -169,15 +169,7 @@ const Contact: React.FC = () => {
                   required
                 />
               </div>
-              {error && <p className="text-red-600 text-sm mt-2 font-bold">{error}</p>}
-            </div>
-
-            {/* DEBUG SECTION - TO BE REMOVED */}
-            <div className="mt-4 p-4 bg-gray-100 rounded text-xs font-mono text-gray-600">
-              <p className="font-bold mb-2">Debug Info:</p>
-              <p>Service ID: {import.meta.env.VITE_EMAILJS_SERVICE_ID ? '✅ Loaded' : '❌ Missing'}</p>
-              <p>Template ID: {import.meta.env.VITE_EMAILJS_TEMPLATE_ID ? '✅ Loaded' : '❌ Missing'}</p>
-              <p>Public Key: {import.meta.env.VITE_EMAILJS_PUBLIC_KEY ? '✅ Loaded' : '❌ Missing'}</p>
+              {error && <p className="text-red-600 text-sm mt-2">{error}</p>}
             </div>
 
             <div className="pt-4">
