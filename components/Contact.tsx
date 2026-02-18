@@ -4,6 +4,7 @@ import { Check } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [honeypot, setHoneypot] = useState('');
   const [mathChallenge, setMathChallenge] = useState({ num1: 0, num2: 0, sum: 0 });
   const [userAnswer, setUserAnswer] = useState('');
@@ -22,6 +23,7 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting) return; // Prevent double checking
     setError('');
 
     // Check honeypot (bots will likely fill this hidden field)
@@ -51,6 +53,7 @@ const Contact: React.FC = () => {
     }
 
     try {
+      setIsSubmitting(true);
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
       const contactUsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID_CONTACT_US;
@@ -84,6 +87,7 @@ const Contact: React.FC = () => {
       console.error('Error submitting form:', error);
       const errorMessage = error?.text || error?.message || 'Failed to send message. Please try again.';
       setError(errorMessage);
+      setIsSubmitting(false);
     }
   };
 
@@ -197,8 +201,12 @@ const Contact: React.FC = () => {
             </div>
 
             <div className="pt-4">
-              <button type="submit" className="bg-[#001D00] text-white px-10 py-3 uppercase tracking-wider text-sm font-semibold hover:bg-black transition-colors w-full md:w-auto">
-                Send Message
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={`bg-[#001D00] text-white px-10 py-3 uppercase tracking-wider text-sm font-semibold hover:bg-black transition-colors w-full md:w-auto ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </div>
           </form>
