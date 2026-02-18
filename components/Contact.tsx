@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Message Sent</h2>
           <p className="text-gray-600 mb-8">
-            Thank you for contacting Njord Polaris. Our team will review your request and get back to you shortly.
+            Thank you for contacting Njord Polaris. Our team will review your request and get back to you within 5 business days.
           </p>
 
         </div>
