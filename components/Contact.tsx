@@ -37,6 +37,17 @@ const Contact: React.FC = () => {
       return;
     }
 
+    // Normalize website URL
+    const form = e.target as HTMLFormElement;
+    const websiteInput = form.elements.namedItem('website') as HTMLInputElement;
+    if (websiteInput && websiteInput.value) {
+      let url = websiteInput.value.trim();
+      if (url && !/^https?:\/\//i.test(url)) {
+        url = `https://${url}`;
+        websiteInput.value = url;
+      }
+    }
+
     try {
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -84,12 +95,7 @@ const Contact: React.FC = () => {
           <p className="text-gray-600 mb-8">
             Thank you for contacting Njord Polaris. Our team will review your request and get back to you shortly.
           </p>
-          <button
-            onClick={() => setIsSubmitted(false)}
-            className="text-[#001D00] font-semibold border-b-2 border-[#001D00] hover:pb-1 transition-all"
-          >
-            Send another message
-          </button>
+
         </div>
       </div>
     );
