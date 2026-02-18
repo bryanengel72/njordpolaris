@@ -93,23 +93,38 @@ const Contact: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="bg-gray-50 py-12 md:py-24 flex items-center justify-center min-h-[60vh]">
-        <div className="max-w-md w-full bg-white p-12 shadow-sm border border-gray-100 text-center reveal active">
-          <div className="w-16 h-16 bg-[#001D00] rounded-full flex items-center justify-center mx-auto mb-6">
-            <Check className="text-white" size={32} />
+      <div className="bg-gray-50 pt-2 pb-8 md:pt-2 md:pb-12">
+        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+          <div className="flex flex-col w-full">
+            <div className="w-full bg-white mb-6">
+              <img
+                src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/singapore_np.jpeg"
+                alt="Singapore Cityscape"
+                className="w-full h-auto rounded-sm shadow-sm"
+              />
+            </div>
+            <div className="mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
+            </div>
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Message Sent</h2>
-          <p className="text-gray-600 mb-8">
-            Thank you for contacting Njord Polaris. Our team will review your request and get back to you within 5 business days.
-          </p>
-
+          <div className="max-w-4xl mx-auto bg-white p-6 md:p-12 shadow-sm border border-gray-100">
+            <div className="flex flex-col items-start">
+              <div className="w-16 h-16 bg-[#001D00] rounded-full flex items-center justify-center mb-6">
+                <Check className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Message Sent</h3>
+              <p className="text-gray-600">
+                Thank you for contacting Njord Polaris. Our team will review your request and get back to you within 5 business days.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="bg-gray-50 pt-2 pb-8 md:pt-2 md:pb-12 reveal">
+    <div className="bg-gray-50 pt-2 pb-8 md:pt-2 md:pb-12">
       <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
 
         {/* Layout Container to force structure update */}
