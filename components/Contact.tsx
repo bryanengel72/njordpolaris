@@ -154,7 +154,7 @@ const Contact: React.FC = () => {
               </div>
               <div className="flex flex-col">
                 <label htmlFor="website" className="text-sm font-medium text-gray-700 mb-2">Company Website</label>
-                <input type="url" id="website" name="website" className="border-b border-gray-300 focus:border-[#001D00] focus:outline-none py-2 transition-colors bg-transparent" />
+                <input type="text" id="website" name="website" className="border-b border-gray-300 focus:border-[#001D00] focus:outline-none py-2 transition-colors bg-transparent" />
               </div>
             </div>
 
