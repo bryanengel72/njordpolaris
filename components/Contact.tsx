@@ -31,7 +31,9 @@ const Contact: React.FC = () => {
     }
 
     // Check math challenge
-    if (parseInt(userAnswer) !== mathChallenge.sum) {
+    console.log('Math Challenge:', { userAnswer, sum: mathChallenge.sum, type: typeof userAnswer });
+    if (Number(userAnswer) !== mathChallenge.sum) {
+      console.warn('Math validation failed');
       setError('Incorrect math answer. Please try again.');
       generateChallenge();
       return;
