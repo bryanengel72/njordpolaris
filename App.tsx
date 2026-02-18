@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -128,7 +127,6 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <MainLayout />
-      <Analytics />
     </BrowserRouter>
   );
 };
