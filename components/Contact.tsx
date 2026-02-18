@@ -63,11 +63,11 @@ const Contact: React.FC = () => {
       const emailPromises = [];
 
       // Template 1 (e.g. Auto-Reply)
-      if (templateId) {
-        emailPromises.push(
-          emailjs.sendForm(serviceId, templateId, e.target as HTMLFormElement, publicKey)
-        );
-      }
+      // if (templateId) {
+      //  emailPromises.push(
+      //    emailjs.sendForm(serviceId, templateId, e.target as HTMLFormElement, publicKey)
+      //  );
+      //}
 
       // Template 2 (e.g. Contact Us Notification)
       if (contactUsTemplateId) {
