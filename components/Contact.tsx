@@ -78,9 +78,10 @@ const Contact: React.FC = () => {
 
       // Success
       setIsSubmitted(true);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error submitting form:', error);
-      setError('Failed to send message. Please try again.');
+      const errorMessage = error?.text || error?.message || 'Failed to send message. Please try again.';
+      setError(errorMessage);
     }
   };
 
