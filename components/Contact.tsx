@@ -40,15 +40,30 @@ const Contact: React.FC = () => {
     try {
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const contactUsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID_CONTACT_US;
       const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-      // Send email using EmailJS
-      await emailjs.sendForm(
-        serviceId,
-        templateId,
-        e.target as HTMLFormElement,
-        publicKey
-      );
+      if (!serviceId || !publicKey || (!templateId && !contactUsTemplateId)) {
+        throw new Error('Missing EmailJS configuration. Check your .env.local file.');
+      }
+
+      const emailPromises = [];
+
+      // Template 1 (e.g. Auto-Reply)
+      if (templateId) {
+        emailPromises.push(
+          emailjs.sendForm(serviceId, templateId, e.target as HTMLFormElement, publicKey)
+        );
+      }
+
+      // Template 2 (e.g. Contact Us Notification)
+      if (contactUsTemplateId) {
+        emailPromises.push(
+          emailjs.sendForm(serviceId, contactUsTemplateId, e.target as HTMLFormElement, publicKey)
+        );
+      }
+
+      await Promise.all(emailPromises);
 
       // Success
       setIsSubmitted(true);
