@@ -11,7 +11,6 @@ const Hero: React.FC = () => {
             className="w-full h-auto block object-cover"
             autoPlay
             muted
-            loop
             playsInline
             style={{ display: 'block' }}
           >
