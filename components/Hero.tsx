@@ -7,16 +7,12 @@ const Hero: React.FC = () => {
       {/* Hero Video Container */}
       <div className="w-full relative">
         <div className="relative w-full overflow-hidden">
-          <video
+          <img
+            src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Metal%20on%20belt.jpeg"
+            alt="Hero image showing metal on belt"
             className="w-full h-auto block object-cover"
-            autoPlay
-            muted
-            playsInline
             style={{ display: 'block' }}
-          >
-            <source src="https://pub-e275050976b44ce6a57233bbbfab851a.r2.dev/Molten.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          />
           <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
         </div>
       </div>
