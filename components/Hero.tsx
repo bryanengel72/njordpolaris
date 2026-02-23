@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
             className="w-full h-[60vh] md:h-[70vh] lg:h-[80vh] block object-cover object-bottom"
             style={{ display: 'block' }}
           />
-          <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-black/50 pointer-events-none"></div>
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none p-4 md:p-8">
             <img
               src="https://pub-e275050976b44ce6a57233bbbfab851a.r2.dev/Njord%20Polaris%2C%20Inc%401.5x.png"
