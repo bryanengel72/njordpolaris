@@ -14,13 +14,6 @@ const Hero: React.FC = () => {
             style={{ display: 'block' }}
           />
           <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <img
-              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Njord%20Polaris,%20Inc.%20FF-01.png"
-              alt="Njord Polaris Logo"
-              className="w-2/3 max-w-sm md:max-w-md lg:max-w-lg h-auto"
-            />
-          </div>
         </div>
       </div>
 
