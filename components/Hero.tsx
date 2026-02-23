@@ -14,11 +14,11 @@ const Hero: React.FC = () => {
             style={{ display: 'block' }}
           />
           <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none p-4 md:p-8">
             <img
               src="https://pub-e275050976b44ce6a57233bbbfab851a.r2.dev/Njord%20Polaris%2C%20Inc%401.5x.png"
               alt="Njord Polaris White Logo"
-              className="w-2/3 max-w-sm md:max-w-md lg:max-w-lg h-auto drop-shadow-lg opacity-90"
+              className="w-auto h-auto max-w-[80%] max-h-[80%] drop-shadow-lg opacity-90 object-contain"
             />
           </div>
         </div>
