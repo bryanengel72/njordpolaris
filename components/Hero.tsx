@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
           <img
             src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Metal%20on%20belt.jpeg"
             alt="Hero image showing metal on belt"
-            className="w-full h-[50vh] md:h-[60vh] lg:h-[70vh] block object-cover"
+            className="w-full h-[60vh] md:h-[70vh] lg:h-[80vh] block object-cover object-[center_60%]"
             style={{ display: 'block' }}
           />
           <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
