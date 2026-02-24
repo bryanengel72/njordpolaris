@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
 
   const logoSrc = isHomePage
     ? "https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Njord%20Polaris_Green.svg"
-    : "https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Njord%20Polaris_White.svg";
+    : "https://pub-e275050976b44ce6a57233bbbfab851a.r2.dev/Njord%20Polaris%20(8%20x%202%20in)_White.svg";
 
   const linkActiveStyle = isHomePage
     ? "text-white bg-[#001D00] font-semibold"
