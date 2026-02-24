@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
       <div className="w-full relative">
         <div className="relative w-full overflow-hidden">
           <img
-            src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Metal%20on%20belt.jpeg"
+            src="https://pub-e275050976b44ce6a57233bbbfab851a.r2.dev/Metal%20on%20belt.jpeg"
             alt="Hero image showing metal on belt"
             className="w-full h-[60vh] md:h-[70vh] lg:h-[80vh] block object-cover object-bottom"
             style={{ display: 'block' }}
