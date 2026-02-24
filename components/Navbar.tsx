@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
     : "bg-[#001D00] border-[#001D00] text-white";
 
   const logoSrc = isHomePage
-    ? "https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/Njord%20Polaris_Green.svg"
+    ? "https://pub-e275050976b44ce6a57233bbbfab851a.r2.dev/Njord%20Polaris_Green.svg"
     : "https://pub-e275050976b44ce6a57233bbbfab851a.r2.dev/Njord%20Polaris%20(8%20x%202%20in)_White.svg";
 
   const linkActiveStyle = isHomePage
