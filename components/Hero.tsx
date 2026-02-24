@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Hero Text Content */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-12 md:py-24 w-full reveal">
+      <div className="w-full px-6 md:px-12 lg:px-24 py-12 md:py-24 reveal">
         <div className="max-w-3xl">
           <h1 className="text-3xl md:text-6xl font-bold text-gray-900 leading-tight">
             One Planet.<br />
