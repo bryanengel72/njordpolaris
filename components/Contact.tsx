@@ -85,7 +85,7 @@ const Contact: React.FC = () => {
           {/* 1. Image Section */}
           <div className="w-full bg-white mb-6 order-1">
             <img
-              src="https://zgfooiszwnzzwerznwwy.supabase.co/storage/v1/object/public/website-assets/singapore_np.jpeg"
+              src="https://pub-e275050976b44ce6a57233bbbfab851a.r2.dev/singapore_np.jpeg"
               alt="Singapore Cityscape"
               className="w-full h-auto rounded-sm shadow-sm"
             />
