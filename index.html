@@ -3,12 +3,14 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <title>Njord Polaris</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
+    html, body {
       font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
+      width: 100%;
     }
 
     /* Smooth scrolling for anchor links */
@@ -30,7 +32,7 @@
   </style>
 </head>
 
-<body class="bg-white text-gray-900 antialiased">
+<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
   <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
