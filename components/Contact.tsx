@@ -38,12 +38,20 @@ const Contact: React.FC = () => {
     }
 
     try {
-      // Send email using EmailJS
+      // Send email using EmailJS to the website owner
       await emailjs.sendForm(
-        'YOUR_SERVICE_ID',      // You'll replace this
-        'YOUR_TEMPLATE_ID',     // You'll replace this
+        'service_atrtf4i',
+        'template_njyz4qz',
         e.target as HTMLFormElement,
-        'YOUR_PUBLIC_KEY'       // You'll replace this
+        'l2ixuXbLDbaE-lOH1'
+      );
+
+      // Send auto-reply to the person filling it out
+      await emailjs.sendForm(
+        'service_atrtf4i',
+        'template_kprty5o',
+        e.target as HTMLFormElement,
+        'l2ixuXbLDbaE-lOH1'
       );
 
       // Success
